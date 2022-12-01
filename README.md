@@ -119,7 +119,7 @@ The point is this:
 * Our tree has 15 node values created by our eight original pieces of data
 * We can provide someone with three values from the tree, called a _proof_ that, combined with their one piece of original data, can prove that their data was used to build the tree, so long as we know the _root_ value.
 * This _proof_ provides no information to the user about any of the other pieces of data used to create the tree.
-* This has all kinds of interesting applications, from identifying possible data corruption in the InterPlanetary File System (IPFS), Btrfs and ZFS file systems, to identifying changes in Git and Mercurial, to keeping track of transactions within blocks of the the Bitcoin and Ethereum blockchain networks.
+* This has all kinds of interesting applications, from identifying possible data corruption in the InterPlanetary File System (IPFS), Btrfs and ZFS file systems, to identifying changes in Git and Mercurial, to keeping track of transactions within blocks of the Bitcoin and Ethereum blockchain networks.
 
 Let's see how it works:
 
