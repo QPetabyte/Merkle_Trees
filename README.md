@@ -137,7 +137,7 @@ Your _proof_ would consist of just three integers:
 
 Using these values and data item #3, anyone can re-calculate the root value (you can calculate N<sub>3</sub> from data item #3, with N<sub>3</sub> and N<sub>4</sub> you can calculate N<sub>3,4</sub>, with N<sub>3,4</sub> and N<sub>1,2</sub>, you can calculate N<sub>(1,2),(3,4)</sub>, and with N<sub>(1,2),(3,4)</sub> and N<sub>(5,6),(7,8)</sub>, you can calculate the root value and compare it to the known root).
 
-And, this bears repeaing: _none of the proof values gives anyone any information about the other original data values_.
+And this bears repeaing: _none of the proof values gives anyone any information about the other original data values_.
 
 Of course Merkle Trees can be MUCH bigger than simply having 8 leaf nodes, and as the number of leaf nodes grows, so do the number of values in the proof, but that number grows slowly when compared to the increase in size of the leaf nodes. A proof containing 32 integers would be sufficient for a Merkle Tree with 4,294,967,296 leaf nodes!
 
