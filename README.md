@@ -142,3 +142,7 @@ And this bears repeaing: _none of the proof values gives anyone any information 
 Of course Merkle Trees can be MUCH bigger than simply having 8 leaf nodes, and as the number of leaf nodes grows, so do the number of values in the proof, but that number grows slowly when compared to the increase in size of the leaf nodes. A proof containing 32 integers would be sufficient for a Merkle Tree with 4,294,967,296 leaf nodes!
 
 Most hash tree implementations are binary (two child nodes under each node) but they can just as well use many more child nodes under each node, but that's a story for another day!
+
+# Dockerfile
+
+I've added a Dockerfile to build a container to run the python code. It will install all of the pre-requisite libraries. To use it, edit the code however you want (if you need to make changes), then build the container to run it.
