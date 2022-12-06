@@ -1,7 +1,7 @@
 # Merkle_Trees
 ## What is a Merkle Tree?
 
-In cryptography and computer science, a hash tree or Merkle Tree is a tree in which we label every "leaf" (node) with the cryptographic hash of some data. We can use Merkle Trees can to prove that data is included in a list while keeping the storage required to perform that proof to a minimum.
+In cryptography and computer science, a hash tree or Merkle Tree is a tree in which we label every "leaf" (node) with the cryptographic hash of some data. We can use Merkle Trees to prove that data is included in a list while keeping the storage required to perform that proof to a minimum.
 
 Let's see how!
 
