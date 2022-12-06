@@ -37,12 +37,12 @@
 # Gives us the following output:
 #
 # Root: 0x92b50ba94b4eddae31256603c1e445747eb4da7bbcce500a1c711ebeef99757e
-# Proof: ['0x2ab0a4443bbea3fbe4d0e1503d11ff1367842fb0c8b28a5c8550f27599a40751', 
-#         '0xe53833745f812dbbffd118a573b4b380aae6b82afd4839d67dd7a2f809a5554c', 
+# Proof: ['0x2ab0a4443bbea3fbe4d0e1503d11ff1367842fb0c8b28a5c8550f27599a40751',
+#         '0xe53833745f812dbbffd118a573b4b380aae6b82afd4839d67dd7a2f809a5554c',
 #         '0xab642276d45d87c4c538fea27c78e9fae2b6f5d3505d3f108d480897899b5993']
-# 
-# Copyright 2022 Prof. Qwerty Petabyte 
-# This code is released under the MIT License 
+#
+# Copyright 2022 Prof. Qwerty Petabyte
+# This code is released under the MIT License
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -51,7 +51,7 @@
 # sell copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions: The above
 # copyright notice and this permission notice shall be included in all copies
-# or substantial portions of the Software. 
+# or substantial portions of the Software.
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 # EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
@@ -73,7 +73,7 @@ class MerkleTreeKeccak:
         MerkleTreeKeccak.__check_input(leaves)
         self.tree = MerkleTreeKeccak.__compute_tree(leaves)
 
-    @staticmethod 
+    @staticmethod
     def __check_input(leaves: List[HexBytes]):
         if not isinstance(leaves, list):
             raise ValueError('MerkleTreeKeccak: Leaves are not a list')
@@ -152,10 +152,10 @@ leaves = []
 for address in allowlist:
     leaves.append(Web3.solidityKeccak(['bytes'], [address]))
 mt = MerkleTreeKeccak(leaves)
-# this gives us the root value, which is 1/2 of the values necessary 
+# this gives us the root value, which is 1/2 of the values necessary
 # to show that an address is part of the allow list
 print('Root:', mt.root_hash)
 # now, we need to get the proof value associated with the allow list: in this case, so we use allowlist[0] to pull it out.
-# normally there would be a whole bunch of addresses in the allow list, 
+# normally there would be a whole bunch of addresses in the allow list,
 # but we're just making a list with only our address and a "null" address...
 print('Proof:', mt.get_proof(Web3.solidityKeccak(['bytes'], [allowlist[0]])))
