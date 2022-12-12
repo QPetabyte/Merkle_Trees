@@ -92,9 +92,9 @@ Adding another level, we have:
 
 We're continuing to use our designated notation, and now, we've created two more _inodes_:
 
-N<sub>(1,2),(3,4)</sub> = H((H(1) + H(2)) + (H(3) + H(4)))
+N<sub>(1,2),(3,4)</sub> = H(H(H(1) + H(2)) + H(H(3) + H(4)))
 
-N<sub>(5,6),(7,8)</sub> = H((H(5) + H(6)) + (H(7) + H(8)))
+N<sub>(5,6),(7,8)</sub> = H(H(H(5) + H(6)) + H(H(7) + H(8)))
 
 ### The Root
 
@@ -108,7 +108,7 @@ We finally arrive at the root of our tree, which we'll call _R_.
 
 Using the same notation, the root value is created:
 
-R = H(H((H(1) + H(2)) + (H(3) + H(4))) + H((H(5) + H(6)) + (H(7) + H(8))))
+R = H(H(H(H(1) + H(2)) + H(H(3) + H(4))) + H(H(H(5) + H(6)) + H(H(7) + H(8))))
 
 ## But Professor Petabyte, what's the point?
 
