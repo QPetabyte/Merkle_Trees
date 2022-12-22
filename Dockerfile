@@ -3,7 +3,7 @@ FROM python:3.9-slim-bullseye
 # Dockerfile author
 MAINTAINER Qwerty Petabyte (qpetabyte@kringlecon.com)
 # update, install prerequisites, and add a user
-RUN apt-get update && apt-get upgrade -y && apt install vim nano -y && pip install eth_typing hexbytes web3 && \
+RUN apt-get update && apt-get upgrade -y && apt install build-essential vim nano -y && pip install eth_typing hexbytes web3 && \
     useradd -m -s /bin/bash mt_user
 USER mt_user
 # copy in the code
